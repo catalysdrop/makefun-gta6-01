@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Solmara Bay — Open-World Crime Game</title>
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 16 16'><rect width='16' height='16' fill='%23ffd23e'/></svg>">
+<link rel="stylesheet" href="./style.css">
+<script type="importmap">
+{
+  "imports": {
+    "three": "./vendor/three.module.min.js"
+  }
+}
+</script>
+</head>
+<body>
+<canvas id="game-canvas"></canvas>
+
+<div id="hud" style="display:none">
+  <div id="hud-top-left">
+    <div id="hud-cash">$0</div>
+    <div id="hud-objective"></div>
+  </div>
+  <div id="hud-top-right">
+    <div id="hud-stars">☆☆☆☆☆</div>
+    <div id="hud-health"><div id="hud-health-fill"></div></div>
+    <div id="hud-ammo">AMMO 12/12</div>
+  </div>
+  <div id="hud-bottom-right">
+    <canvas id="minimap" width="170" height="170"></canvas>
+    <div id="hud-speed"></div>
+  </div>
+  <div id="hud-feed"></div>
+  <div id="hud-prompt"></div>
+  <div id="crosshair">+</div>
+  <button id="btn-mute">Sound: ON</button>
+</div>
+
+<div id="overlay-start" class="overlay">
+  <div class="panel">
+    <h1>SOLMARA BAY</h1>
+    <p class="tagline">An open-world crime story — sun, sea, and bad decisions.</p>
+    <p class="story">You are <b>Deke Marlin</b>, fresh off the bus in Solmara Bay with empty
+    pockets and a fast mouth. Fixer <b>Vera Solano</b> has three jobs for you —
+    if you can drive, dodge the Solmara PD, and keep your head down.</p>
+    <div class="controls">
+      <b>W A S D</b> move / drive &nbsp;·&nbsp; <b>Shift</b> run &nbsp;·&nbsp; <b>Mouse drag</b> look<br>
+      <b>E</b> enter / exit car &nbsp;·&nbsp; <b>Space</b> brake &nbsp;·&nbsp; <b>Click</b> shoot<br>
+      <b>F</b> punch &nbsp;·&nbsp; <b>R</b> reload &nbsp;·&nbsp; <b>P</b> pause &nbsp;·&nbsp; <b>M</b> mute
+    </div>
+    <p class="tips">Steal cars, run missions, watch your wanted stars. Lose the cops by
+    staying out of sight. Progress saves automatically.</p>
+    <button id="btn-start" class="big">▶ New Game</button>
+    <button id="btn-continue" class="big secondary" style="display:none">Continue</button>
+    <p class="fine">A fully original game. No assets, names or music from any commercial game.</p>
+  </div>
+</div>
+
+<div id="overlay-busted" class="overlay" style="display:none">
+  <div class="panel">
+    <h1 class="red">BUSTED!</h1>
+    <p id="busted-fine"></p>
+    <button id="btn-resume" class="big">Back to the streets</button>
+  </div>
+</div>
+
+<div id="overlay-wasted" class="overlay" style="display:none">
+  <div class="panel">
+    <h1 class="red">WASTED</h1>
+    <p>The hospital patched you up. It cost you $50.</p>
+    <button id="btn-retry" class="big">Back to the streets</button>
+  </div>
+</div>
+
+<div id="overlay-pause" class="overlay" style="display:none">
+  <div class="panel">
+    <h1>Paused</h1>
+    <p>Solmara Bay waits for no one. Except now.</p>
+    <button id="btn-pause-resume" class="big">Resume</button>
+  </div>
+</div>
+
+<script type="module" src="./js/main.js"></script>
+</body>
+</html>

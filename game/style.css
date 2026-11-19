@@ -1,0 +1,35 @@
+/* Solmara Bay — HUD and overlay styling. */
+* { box-sizing: border-box; }
+html, body { margin: 0; padding: 0; height: 100%; overflow: hidden; background: #0a1018; font-family: 'Trebuchet MS', Verdana, sans-serif; }
+#game-canvas { display: block; width: 100vw; height: 100vh; }
+#hud { position: fixed; inset: 0; pointer-events: none; color: #fff; text-shadow: 0 1px 3px rgba(0,0,0,.8); z-index: 5; }
+#hud-top-left { position: absolute; top: 14px; left: 16px; }
+#hud-cash { font-size: 30px; font-weight: bold; color: #7dff9a; }
+#hud-objective { margin-top: 6px; max-width: 430px; font-size: 15px; background: rgba(0,0,0,.45); padding: 7px 10px; border-left: 4px solid #ffd23e; border-radius: 4px; line-height: 1.35; }
+#hud-top-right { position: absolute; top: 14px; right: 16px; text-align: right; }
+#hud-stars { font-size: 26px; letter-spacing: 3px; }
+#hud-health { width: 170px; height: 12px; background: rgba(0,0,0,.55); border: 1px solid rgba(255,255,255,.5); border-radius: 6px; margin-top: 6px; overflow: hidden; }
+#hud-health-fill { height: 100%; width: 100%; background: #37d67a; }
+#hud-ammo { margin-top: 6px; font-size: 14px; font-weight: bold; }
+#hud-bottom-right { position: absolute; right: 16px; bottom: 16px; text-align: right; }
+#minimap { border: 2px solid rgba(255,255,255,.65); border-radius: 8px; box-shadow: 0 2px 10px rgba(0,0,0,.5); }
+#hud-speed { font-size: 22px; font-weight: bold; margin-top: 4px; }
+#hud-feed { position: absolute; left: 16px; bottom: 16px; max-width: 420px; }
+.feed-item { background: rgba(0,0,0,.5); padding: 6px 10px; margin-top: 5px; border-radius: 4px; font-size: 14px; }
+#hud-prompt { position: absolute; left: 50%; bottom: 110px; transform: translateX(-50%); font-size: 18px; font-weight: bold; background: rgba(0,0,0,.55); padding: 8px 16px; border-radius: 6px; }
+#hud-prompt:empty { display: none; }
+#crosshair { position: absolute; left: 50%; top: 50%; transform: translate(-50%, -50%); font-size: 26px; color: rgba(255,255,255,.9); display: none; }
+#btn-mute { position: absolute; left: 16px; top: 150px; pointer-events: auto; background: rgba(0,0,0,.5); color: #fff; border: 1px solid rgba(255,255,255,.5); border-radius: 6px; padding: 6px 10px; cursor: pointer; font-size: 14px; }
+.overlay { position: fixed; inset: 0; display: flex; align-items: center; justify-content: center; background: rgba(5, 10, 18, 0.72); z-index: 10; }
+.panel { background: linear-gradient(160deg, #16222e, #0d1520); border: 2px solid #ffd23e; border-radius: 12px; padding: 30px 38px; max-width: 620px; text-align: center; color: #f0f0f0; box-shadow: 0 10px 60px rgba(0,0,0,.7); }
+.panel h1 { margin: 0 0 6px; font-size: 52px; letter-spacing: 4px; color: #ffd23e; text-shadow: 0 3px 0 #b8860b, 0 6px 18px rgba(0,0,0,.6); }
+.panel h1.red { color: #ff4040; text-shadow: 0 3px 0 #7a1010, 0 6px 18px rgba(0,0,0,.6); }
+.tagline { font-style: italic; color: #9fc3dd; margin: 4px 0 14px; }
+.story { font-size: 16px; line-height: 1.5; }
+.controls { background: rgba(255,255,255,.08); border-radius: 8px; padding: 12px; margin: 16px 0; line-height: 1.9; font-size: 15px; }
+.controls b { color: #ffd23e; }
+.tips { font-size: 14px; color: #c8d2dc; }
+button.big { pointer-events: auto; font-size: 20px; font-weight: bold; padding: 13px 34px; margin: 6px; border: none; border-radius: 8px; background: #ffd23e; color: #1a1a1a; cursor: pointer; }
+button.big:hover { background: #ffe97a; }
+button.big.secondary { background: #2e7fd8; color: #fff; }
+.fine { font-size: 12px; color: #7a8a9a; margin-top: 14px; }
